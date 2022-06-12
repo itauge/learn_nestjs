@@ -28,7 +28,7 @@ export class CoffesController {
   findOne(@Param('id') id: number) {
     // return `This is my id:${id}`;
     console.log(typeof id);
-    return this.coffieServices.findOne('' + id);
+    return this.coffieServices.findOne(id);
   }
 
   //first post method
@@ -46,8 +46,8 @@ export class CoffesController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string, @Body() body) {
+  remove(@Param('id') id: number) {
     // return `This is delete ${id}`;
-    return this.coffieServices.remove(id, body);
+    return this.coffieServices.remove(id);
   }
 }
