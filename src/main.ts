@@ -9,6 +9,9 @@ async function bootstrap() {
       whitelist: true,
       forbidNonWhitelisted: true,
       transform: true,
+      transformOptions: {
+        enableImplicitConversion: true, //開啓后不用再用@Type(() => Number)
+      },
     }),
   );
   await app.listen(3000);
