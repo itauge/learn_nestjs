@@ -33,7 +33,7 @@ export class CoffesController {
 
   //first post method
   @Post()
-  testPost(@Body() createCoffeDto: CreateCoffeDto) {
+  create(@Body() createCoffeDto: CreateCoffeDto) {
     console.log(createCoffeDto instanceof CreateCoffeDto);
     return this.coffieServices.create(createCoffeDto);
   }
